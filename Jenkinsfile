@@ -3,21 +3,21 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                dir("Vanishri_Patankar_RestfulAndSoapWS") {
+                dir("Vanishri_RestfulAndSoapWS") {
 		bat "mvn clean"
 	}
             }
         }
         stage('Compile') {
             steps {
-	dir("Vanishri__Patankar_RestfulAndSoapWS") {
+	dir("Vanishri_RestfulAndSoapWS") {
 		bat "mvn compile"
 	}
             }
         }
         stage('Test') {
             steps {
-	dir("Vanishri_Patankar_RestfulAndSoapWS") {
+	dir("Vanishri_RestfulAndSoapWS") {
 		bat "mvn test"
 	}
             }
